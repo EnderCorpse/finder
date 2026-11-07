@@ -1,0 +1,8 @@
+services: 
+  finder:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: CSHFinder
+    ports:
+      - "8080:8080"
