@@ -8,14 +8,77 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        table {
+            width: 40%;
+            margin: auto;
+        }
+
+
+        table, th, td {
+            border:1px solid #ddd;
+            border-collapse: collapse;
+            padding: 8px;
+            text-align: center;
+        }
+        tr:nth-child(even) {
+            background-color: rgba(150, 212, 212, 0.4);
+        }
+
+        th:nth-child(even),td:nth-child(even) {
+            background-color: rgba(150, 212, 212, 0.4);
+        }
+    </style>
 </head>
 <body>
 <h1>A Cannibal Project</h1>
-<h2>Find her? I hardly know her!</h2>
+<h2>Finder? I hardly know her!</h2>
 
 <p>
     Under construction!
 </p>
+
+{{/*<div>*/}}
+{{/*    <table id="requestContents">*/}}
+{{/*        <colgroup>*/}}
+{{/*            <col style="width: 128px">*/}}
+{{/*            <col style="width: 136px">*/}}
+{{/*            <col style="width: 84px">*/}}
+{{/*            <col style="width: 113px">*/}}
+{{/*            <col style="width: 123px">*/}}
+{{/*        </colgroup>*/}}
+{{/*        <tr>*/}}
+{{/*            <th>Request ID</th>*/}}
+{{/*            <th>Location</th>*/}}
+{{/*            <th>Item</th>*/}}
+{{/*            <th>Person Requesting</th>*/}}
+{{/*            <th>Request Date</th>*/}}
+{{/*            <th>Return Date</th>*/}}
+{{/*        </tr>*/}}
+{{/*        <tr>*/}}
+{{/*            <td>12345</td>*/}}
+{{/*            <td>Eboard Closet</td>*/}}
+{{/*            <td>Vending</td>*/}}
+{{/*            <td>Brooks & Nick</td>*/}}
+{{/*            <td>11/7/26</td>*/}}
+{{/*            <td>5/31/27</td>*/}}
+{{/*        </tr>*/}}
+{{/*        <tr>*/}}
+{{/*            <td>54321</td>*/}}
+{{/*            <td>Socials Closet</td>*/}}
+{{/*            <td>12 pk of monsters</td>*/}}
+{{/*            <td>Eli & Ender</td>*/}}
+{{/*            <td>11/7/26</td>*/}}
+{{/*            <td>5/31/27</td>*/}}
+{{/*        </tr>*/}}
+{{/*    </table>*/}}
+
+{{/*</div>*/}}
+<div>
+    {{range .}}
+        {{.items}}
+    {{end}}
+</div>
 </body>
 </html>
     
